@@ -4,12 +4,16 @@ import { NgModule } from "@angular/core";
 import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
-import { DefaultComponent } from './layouts/default/default.component';
-import { DashboardComponent } from './Modules/dashboard/dashboard.component';
+import { DefaultModule } from "./layouts/default/default.module";
 
 @NgModule({
-  declarations: [AppComponent, DefaultComponent, DashboardComponent],
-  imports: [BrowserModule, AppRoutingModule, BrowserAnimationsModule],
+  declarations: [AppComponent],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    DefaultModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })
